@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-Ins</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recent Check-Ins</h1>
+        
+        <!-- Counter for total number of check-ins -->
+        <p>Total Check-ins: {{ check_ins|length }}</p>
+        
+        <!-- Table wrapper for mobile scrolling -->
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th class="right-align">Duration</th> <!-- Added How Long Ago Column -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for check_in in check_ins %}
+                    <tr>
+                        <td>{{ check_in['Name'] }}</td>
+                        <td>{{ check_in['Check-in Time'] }}</td>
+                        <td class="right-align">{{ check_in['Time Ago'] }}</td> <!-- Display how long ago -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        <a href="/">Back to check-in page</a>
+    </div>
+    
+</body>
+</html>

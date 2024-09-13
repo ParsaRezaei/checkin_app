@@ -1,0 +1,131 @@
+/* Body */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+}
+
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark black background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Styling for the form title */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #bb86fc; /* Purple text color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e0e0e0; /* Light gray color for labels */
+}
+
+/* Styling for the form inputs */
+input[type="text"], input[type="email"] {
+    width: 100%; /* Full width for inputs */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #bb86fc; /* Purple border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #2e2e2e; /* Dark gray input background */
+    color: #ffffff; /* White text color */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: #888888; /* Light gray placeholder text */
+}
+
+/* Styling for the button */
+button {
+    width: 100%; /* Full width button */
+    padding: 12px;
+    background-color: #6200ea; /* Deep purple button background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+    color: #e0e0e0;
+}
+
+
+.right-align {
+    text-align: right;
+}
+
+thead {
+    background-color: #2e2e2e;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1c1c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    label, input[type="text"], input[type="email"], button {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    /* Make the table horizontally scrollable */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
